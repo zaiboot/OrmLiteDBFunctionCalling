@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("POCGetEntities")]
+[assembly: AssemblyTitle("POC.Repository.Tests")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Microsoft")]
-[assembly: AssemblyProduct("POCGetEntities")]
+[assembly: AssemblyProduct("POC.Repository.Tests")]
 [assembly: AssemblyCopyright("Copyright © Microsoft 2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("f7f5a932-3953-48df-9d89-53c68765d949")]
+[assembly: Guid("53c9515b-1ea8-49f2-90c2-cb0d59a34a33")]
 
 // Version information for an assembly consists of the following four values:
 //
