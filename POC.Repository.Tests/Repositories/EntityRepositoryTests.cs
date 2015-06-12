@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Configuration;
 using System.Diagnostics.CodeAnalysis;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -18,16 +19,23 @@ namespace POC.Repository.Tests.Repositories
         public void TestInitialize()
         {
             OrmLiteConfig.DialectProvider = SqlServerDialect.Provider;
-            
+            IDbConnectionFactory dbConnectionFactory = new OrmLiteConnectionFactory(ConfigurationManager.ConnectionStrings["constr"].ConnectionString);
+            ICadencyOrm cadencyOrm = new CadencyOrmLite(dbConnectionFactory);
+            CadencyOrm.Initialize(cadencyOrm);            
         }
         [TestMethod]
         public void GetListTest()
         {
-            IDbConnectionFactory dbConnectionFactory = new OrmLiteConnectionFactory(ConfigurationManager.ConnectionStrings["constr"].ConnectionString);
-            ICadencyOrm cadencyOrm = new CadencyOrmLite(dbConnectionFactory);
-            CadencyOrm.Initialize(cadencyOrm);
             var repo = new EntityRepository();
-            var list = repo.GetList();
+            var parameters = new Dictionary<string, object>
+            {
+                {"@userName", String.Empty},
+                {"@closePeriodId", -1},
+                {"@closeDayMapId", -1},
+                {"@periodEndDate", null}
+            };
+
+            var list = repo.GetList(parameters);
             Assert.IsNotNull(list);
         }
     }
