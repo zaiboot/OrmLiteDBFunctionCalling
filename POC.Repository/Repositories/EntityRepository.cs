@@ -32,8 +32,7 @@ namespace POC.Repository.Repositories
         public IReadOnlyList<Entity> GetList(Dictionary<string, object> parameters)
         {
             const string FUNCTION_NAME = "dbo.fnGetEntityList";
-
-            return GetListFromFunction<Entity>(FUNCTION_NAME, parameters);
+            return CadencyOrm.GetByFunction<Entity>(FUNCTION_NAME, parameters);
         }
     }
 }

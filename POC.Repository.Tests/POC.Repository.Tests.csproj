@@ -58,8 +58,8 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
-    <Reference Include="Trintech.Cadency.DataAccess, Version=1.1.20.16032, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Trintech.Cadency.DataAccess.1.1.20\lib\net45\Trintech.Cadency.DataAccess.dll</HintPath>
+    <Reference Include="Trintech.Cadency.DataAccess, Version=1.1.21.27916, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Trintech.Cadency.DataAccess.1.1.21\lib\net45\Trintech.Cadency.DataAccess.dll</HintPath>
       <Private>True</Private>
     </Reference>
   </ItemGroup>
