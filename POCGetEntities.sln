@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POC.Repository.Tests", "POC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POC.Bussines", "POC.Bussines\POC.Bussines.csproj", "{50457A5E-2DAE-4512-8996-E5E805AD5B2C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POC.Bussines.Tests", "POC.Bussines.Tests\POC.Bussines.Tests.csproj", "{1129DFEB-9E9B-417A-851A-25B4F36968FD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{50457A5E-2DAE-4512-8996-E5E805AD5B2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{50457A5E-2DAE-4512-8996-E5E805AD5B2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{50457A5E-2DAE-4512-8996-E5E805AD5B2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1129DFEB-9E9B-417A-851A-25B4F36968FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1129DFEB-9E9B-417A-851A-25B4F36968FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1129DFEB-9E9B-417A-851A-25B4F36968FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1129DFEB-9E9B-417A-851A-25B4F36968FD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
