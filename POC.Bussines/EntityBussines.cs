@@ -11,6 +11,7 @@ namespace POC.Bussines
         public IReadOnlyCollection<Model.Entity> GetList(Dictionary<string, object> parameters)
         {
             var repo = new EntityRepository();
+
             //remove duplicates, 
             var list = repo.GetList(parameters).Distinct().ToList();
             var result = new List<Model.Entity>();
@@ -28,6 +29,7 @@ namespace POC.Bussines
                 bizModel.Entities =  FillChildren(bizModel.Id, list);
                 result.Add(bizModel);
             }
+            result.Sort();
             return result;
         }
 
@@ -45,11 +47,10 @@ namespace POC.Bussines
                         Entities = FillChildren(entityChildren.Id, allEntities)
                     };
                     children.Add(mappedChildren);
-
                 }
             }
 
-
+            children.Sort();
             return children;
 
         }
