@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 
 namespace POC.Bussines.Model
 {
@@ -17,7 +18,7 @@ namespace POC.Bussines.Model
 
         public int TaskTreeId;
 
-        public ArrayList Entities;
+        public IEnumerable<Model.Entity> Entities;
 
         public int CompareTo(object obj)
         {

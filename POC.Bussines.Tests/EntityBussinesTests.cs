@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Configuration;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ServiceStack.OrmLite;
+using ServiceStack.Text;
 using Trintech.Cadency.DataAccess.Core;
 
 namespace POC.Bussines.Tests
@@ -22,7 +23,7 @@ namespace POC.Bussines.Tests
         [TestMethod]
         public void GetListTest()
         {
-            EntityBussines bussines =new EntityBussines();
+            var bussines = new EntityBussines();
             var parameters = new Dictionary<string, object>
             {
                 {"@userName", String.Empty},
