@@ -12,7 +12,7 @@ namespace POC.Bussines
         {
             var repo = new EntityRepository();
             //remove duplicates, 
-            var list = repo.GetList(parameters).GroupBy( e=> e.Id).Select( g => g.First()).ToList();
+            var list = repo.GetList(parameters).Distinct().ToList();
             var result = new List<Model.Entity>();
             foreach (var entity in list)
             {
@@ -25,7 +25,7 @@ namespace POC.Bussines
                 {
                     Id = entity.Id
                 };
-                bizModel.Entities = FillChildren(bizModel.Id, list);
+                bizModel.Entities =  FillChildren(bizModel.Id, list);
                 result.Add(bizModel);
             }
             return result;

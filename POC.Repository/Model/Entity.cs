@@ -1,4 +1,6 @@
-﻿namespace POC.Repository.Model
+﻿using System;
+
+namespace POC.Repository.Model
 {
     public class Entity
     {
@@ -14,5 +16,15 @@
         public virtual int DefinitionId { get; set; }
         public virtual int TaskTreeId { get; set; }
 
+        public override bool Equals(object obj)
+        {
+            var compare = (Entity)obj;
+            return compare.Number == Number;
+        }
+
+        public override int GetHashCode()
+        {
+            return Id;
+        }
     }
 }
